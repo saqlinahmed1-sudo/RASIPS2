@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RASIPS - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginPage" class="page">
+    <div class="login-container">
+      <h1>RASIPS</h1>
+      <input type="text" id="userID" placeholder="User ID" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="goToPage('dashboardPage')">Login</button>
+      <div class="login-links">
+        <a href="#">Forgot ID?</a> | <a href="#">Register Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="dashboardPage" class="page hidden">
+    <h2>Welcome to RASIPS Dashboard</h2>
+    <div class="dashboard-actions">
+      <button onclick="goToPage('bookingPage')">New Booking</button>
+      <button onclick="alert('Showing bookings...')">My Bookings</button>
+    </div>
+  </div>
+
+  <div id="bookingPage" class="page hidden">
+    <h2>Booking - Goods Details</h2>
+    <input type="text" placeholder="Type of Goods" />
+    <input type="file" />
+    <button onclick="goToPage('vehiclePage')">Next</button>
+  </div>
+
+  <div id="vehiclePage" class="page hidden">
+    <h2>Booking - Vehicle Details</h2>
+    <input type="text" placeholder="Vehicle Number" />
+    <input type="file" />
+    <button onclick="goToPage('paymentPage')">Next</button>
+  </div>
+
+  <div id="paymentPage" class="page hidden">
+    <h2>Payment</h2>
+    <p>Goods Charge: ₹500</p>
+    <p>Vehicle Charge: ₹1000</p>
+    <p>Total: ₹1500</p>
+    <button onclick="goToPage('billPage')">Pay</button>
+  </div>
+
+  <div id="billPage" class="page hidden">
+    <h2>Bill Generated</h2>
+    <p>Booking ID: #RAS12345</p>
+    <button onclick="downloadBill()">Download Bill</button>
+    <button onclick="goToPage('rfidPage')">Next</button>
+  </div>
+
+  <div id="rfidPage" class="page hidden">
+    <h2>RFID Details</h2>
+    <p>RFID Assigned: #RFID67890</p>
+    <button onclick="goToPage('dashboardPage')">Finish</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

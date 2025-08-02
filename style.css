@@ -1,0 +1,56 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  display: none;
+  padding: 40px;
+  text-align: center;
+}
+.page:not(.hidden) {
+  display: block;
+}
+.login-container {
+  max-width: 320px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.login-container h1 {
+  color: #003366;
+}
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+button {
+  background: #ff9900;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+button:hover {
+  background: #e68a00;
+}
+.login-links {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+.login-links a {
+  color: #003366;
+  text-decoration: none;
+}
+.dashboard-actions button {
+  margin: 10px;
+}
